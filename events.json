@@ -11,7 +11,7 @@
       "stripeLink": "WWW.GOOGLE.COM"
     },
     {
-      "active": false,
+      "active": true,
       "title": "Jura",
       "date": "14 Gennaio",
       "location": "Villa ER",
