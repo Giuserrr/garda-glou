@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "data"
+    label: "Dati Sito"
+    files:
+      - name: "events"
+        label: "Gestione Eventi"
+        file: "events.json"
+        fields:
+          - name: "events"
+            label: "Lista Eventi"
+            widget: "list"
+            fields:
+              - {label: "Titolo", name: "title", widget: "string"}
+              - {label: "Data (es. 24 Maggio)", name: "date", widget: "string"}
+              - {label: "Luogo", name: "location", widget: "string"}
+              - {label: "Prezzo", name: "price", widget: "string"}
+              - {label: "Attivo", name: "active", widget: "boolean", default: true}
+              - {label: "Link Stripe", name: "stripeLink", widget: "string"}
+              - {label: "Locandina", name: "image", widget: "image"}
+              - {label: "Descrizione", name: "desc", widget: "text"}
