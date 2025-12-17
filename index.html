@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GARDA GLOU | Masterclass Vino</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* --- VARIABILI COLORI (Dal Logo) --- */
+        :root {
+            --bg-dark: #0a0f1f; /* Quasi nero, blu notte profondo */
+            --navy: #1a2b6d;    /* Il blu delle onde */
+            --red: #d93a2b;     /* Il rosso della scritta */
+            --skin: #f4cba8;    /* Il rosa della mano */
+            --bottle: #2e1a12;
+            --white: #f9f9f9;
+            --gray: #888;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--white);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            padding-bottom: 80px; /* Spazio per navigazione mobile */
+        }
+
+        h1, h2, h3 { font-family: 'Anton', sans-serif; letter-spacing: 1px; text-transform: uppercase; }
+        
+        /* --- HEADER & NAV --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: linear-gradient(to bottom, rgba(10,15,31,0.95), rgba(10,15,31,0));
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--red);
+            text-shadow: 2px 2px 0px var(--white); /* Effetto pop */
+            text-decoration: none;
+        }
+
+        .nav-toggle {
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .nav-toggle:hover { transform: scale(1.1); color: var(--red); }
+
+        /* Menu a tendina full screen */
+        #menu-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--navy);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            transform: translateY(-100%);
+            transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        #menu-overlay.open { transform: translateY(0); }
+        .menu-link {
+            font-size: 2rem; color: var(--white); text-decoration: none; margin: 15px;
+            font-family: 'Anton', sans-serif;
+        }
+        .menu-link:hover { color: var(--skin); }
+
+        /* --- CONTAINER PRINCIPALE --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px 20px 20px;
+        }
+
+        /* --- GRIGLIA EVENTI (Stile Netflix) --- */
+        .section-title { margin-bottom: 20px; font-size: 1.2rem; color: var(--gray); }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Mobile: 2 colonne */
+            gap: 15px;
+        }
+
+        @media(min-width: 768px) {
+            .events-grid { grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        }
+
+        .card {
+            position: relative;
+            aspect-ratio: 4/5; /* Formato 1080x1350 */
+            border-radius: 8px;
+            overflow: hidden;
+            cursor: pointer;
+            background-color: #161b2e;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Effetto Hover "Netflix" */
+        .card:hover {
+            transform: scale(1.05);
+            z-index: 10;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            border: 1px solid var(--red);
+        }
+
+        .card img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: opacity 0.3s;
+        }
+
+        .card-info {
+            position: absolute;
+            bottom: 0; left: 0; width: 100%;
+            padding: 40px 10px 15px 10px;
+            background: linear-gradient(to top, rgba(0,0,0,1), transparent);
+            opacity: 1;
+        }
+
+        .card h3 { font-size: 1rem; margin-bottom: 5px; color: var(--white); }
+        .card p { font-size: 0.8rem; color: var(--skin); font-weight: bold; }
+
+        /* Coming Soon Style */
+        .card.coming-soon {
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            border: 2px dashed var(--navy);
+            background: #0e1224;
+        }
+        .card.coming-soon h3 { color: var(--gray); text-align: center; }
+        .card.coming-soon i { font-size: 2rem; color: var(--navy); margin-bottom: 10px; }
+
+        /* --- PAGINA DETTAGLIO EVENTO --- */
+        #event-detail {
+            display: none; /* Nascosto di default */
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg-dark);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+
+        .detail-hero {
+            width: 100%;
+            height: 50vh;
+            position: relative;
+        }
+        
+        .detail-hero img { width: 100%; height: 100%; object-fit: cover; mask-image: linear-gradient(to bottom, black 50%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%); }
+        
+        .close-btn {
+            position: absolute; top: 20px; right: 20px;
+            background: rgba(0,0,0,0.5); color: white;
+            width: 40px; height: 40px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; z-index: 2001; font-size: 1.2rem;
+        }
+
+        .detail-content {
+            padding: 20px;
+            margin-top: -60px; /* Sormonta l'immagine */
+            position: relative;
+        }
+
+        .detail-title { font-size: 2.5rem; line-height: 1; margin-bottom: 10px; color: var(--red); }
+        .detail-meta { display: flex; gap: 15px; font-size: 0.9rem; color: var(--skin); margin-bottom: 20px; }
+        .detail-desc { font-size: 1rem; line-height: 1.6; color: #ccc; margin-bottom: 80px; }
+
+        .cta-bar {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            padding: 15px 20px;
+            background: rgba(10, 15, 31, 0.95);
+            border-top: 1px solid var(--navy);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .price { font-size: 1.5rem; font-family: 'Anton', sans-serif; }
+        
+        .btn-buy {
+            background-color: var(--red);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s;
+        }
+        .btn-buy:hover { background-color: #b02a1e; }
+
+        /* --- PAGINE STANDARD (Chi siamo, Contatti) --- */
+        .page-section { display: none; padding-top: 40px; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .map-container iframe { width: 100%; border-radius: 8px; filter: grayscale(100%) invert(92%) contrast(83%); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" onclick="showHome()" class="logo">GARDA GLOU <i class="fas fa-wine-bottle"></i></a>
+        <div class="nav-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div id="menu-overlay">
+        <a href="#" onclick="showHome(); toggleMenu()" class="menu-link">HOME</a>
+        <a href="#" onclick="showPage('chisiamo'); toggleMenu()" class="menu-link">CHI SIAMO</a>
+        <a href="#" onclick="showPage('contatti'); toggleMenu()" class="menu-link">CONTATTI</a>
+        <a href="#" onclick="toggleMenu()" class="menu-link" style="font-size: 1rem; color: var(--gray);">CHIUDI X</a>
+    </div>
+
+    <div class="container">
+
+        <div id="home-view">
+            <h2 class="section-title">Prossimi Appuntamenti</h2>
+            <div class="events-grid" id="events-container">
+                </div>
+        </div>
+
+        <div id="chisiamo-view" class="page-section">
+            <h1 style="color: var(--skin); font-size: 3rem;">NOI BEVIAMO<br>NATURALE.</h1>
+            <br>
+            <p style="font-size: 1.2rem; line-height: 1.6;">
+                Garda Glou nasce dalla voglia di togliere la puzza sotto al naso dal mondo del vino. 
+                Siamo sul lago, ci piace bere bene e vogliamo condividere chicche introvabili con voi.
+                <br><br>
+                Niente lezioni noiose, solo bicchieri pieni e storie vere.
+            </p>
+            <br>
+            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" style="width:100%; border-radius:8px;">
+        </div>
+
+        <div id="contatti-view" class="page-section">
+            <h1 style="color: var(--skin);">DOVE SIAMO</h1>
+            <p>Via del Vino Matto, 42<br>Desenzano del Garda (BS)</p>
+            <br>
+            <a href="mailto:info@gardaglou.com" style="color: var(--red); font-size: 1.2rem;">info@gardaglou.com</a>
+            <br><br>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.673891461413!2d10.5369!3d45.4705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDI4JzEzLjgiTiAxMMKwMzInMTIuOCJF!5e0!3m2!1sit!2sit!4v1630000000000!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="event-detail">
+        <div class="close-btn" onclick="closeDetail()"><i class="fas fa-times"></i></div>
+        <div class="detail-hero">
+            <img id="detail-img" src="" alt="">
+        </div>
+        <div class="detail-content">
+            <div class="detail-meta">
+                <span id="detail-date"><i class="far fa-calendar"></i> 12 Lug</span>
+                <span id="detail-location"><i class="fas fa-map-marker-alt"></i> Cantina X</span>
+            </div>
+            <h1 id="detail-title" class="detail-title">TITOLO EVENTO</h1>
+            <div id="detail-desc" class="detail-desc">Descrizione...</div>
+        </div>
+        <div class="cta-bar">
+            <span class="price" id="detail-price">€ 00</span>
+            <a href="#" id="detail-link" class="btn-buy" target="_blank">PARTECIPA</a>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. DATI DEGLI EVENTI (IL TUO "DATABASE") ---
+        // Quando avrai il CMS, questo verrà sostituito da file reali.
+        // Per ora modifichi qui dentro per vedere l'effetto.
+        const events = [
+            {
+                id: 1,
+                title: "VINI VULCANICI",
+                date: "24 MAGGIO",
+                location: "Desenzano",
+                price: "€ 45",
+                image: "https://images.unsplash.com/photo-1559563362-c667ba5f5480?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", // Formato verticale
+                desc: "Un viaggio esplosivo tra i vini nati dalla lava. Etna, Vesuvio e non solo. Degustazione di 5 calici con abbinamento cicchetti locali. Non mancare perché sarà una bomba.",
+                stripeLink: "https://buy.stripe.com/test1",
+                active: true
+            },
+            {
+                id: 2,
+                title: "BOLLE RIBELLI",
+                date: "12 GIUGNO",
+                location: "Sirmione",
+                price: "€ 50",
+                image: "https://images.unsplash.com/photo-1598155523122-38423bd4d6bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+                desc: "Dimentica lo Champagne e il Prosecco. Qui si beve rifermentato col fondo, Pet-Nat e metodi ancestrali che sanno di uva e libertà.",
+                stripeLink: "https://buy.stripe.com/test2",
+                active: true
+            },
+            // Placeholder per eventi futuri
+            { active: false }, 
+            { active: false },
+            { active: false }
+        ];
+
+        // --- 2. LOGICA PER GENERARE LE CARD ---
+        const grid = document.getElementById('events-container');
+
+        events.forEach(event => {
+            const card = document.createElement('article');
+            
+            if (event.active) {
+                // Card Evento Attivo
+                card.className = 'card';
+                card.onclick = () => openDetail(event);
+                card.innerHTML = `
+                    <img src="${event.image}" alt="${event.title}">
+                    <div class="card-info">
+                        <h3>${event.title}</h3>
+                        <p>${event.date}</p>
+                    </div>
+                `;
+            } else {
+                // Card Coming Soon
+                card.className = 'card coming-soon';
+                card.innerHTML = `
+                    <i class="fas fa-water"></i>
+                    <h3>GARDA GLOU<br>COMING SOON</h3>
+                `;
+            }
+            grid.appendChild(card);
+        });
+
+        // --- 3. NAVIGAZIONE E INTERAZIONI ---
+        
+        function toggleMenu() {
+            document.getElementById('menu-overlay').classList.toggle('open');
+        }
+
+        function showHome() {
+            hideAll();
+            document.getElementById('home-view').style.display = 'block';
+            window.scrollTo(0,0);
+        }
+
+        function showPage(pageId) {
+            hideAll();
+            document.getElementById(pageId + '-view').style.display = 'block';
+        }
+
+        function hideAll() {
+            document.getElementById('home-view').style.display = 'none';
+            document.getElementById('chisiamo-view').style.display = 'none';
+            document.getElementById('contatti-view').style.display = 'none';
+            closeDetail();
+        }
+
+        // --- 4. GESTIONE DETTAGLIO EVENTO (Locandina Grande) ---
+        function openDetail(data) {
+            // Popola i dati
+            document.getElementById('detail-title').innerText = data.title;
+            document.getElementById('detail-date').innerHTML = `<i class="far fa-calendar"></i> ${data.date}`;
+            document.getElementById('detail-location').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${data.location}`;
+            document.getElementById('detail-price').innerText = data.price;
+            document.getElementById('detail-desc').innerText = data.desc;
+            document.getElementById('detail-img').src = data.image;
+            document.getElementById('detail-link').href = data.stripeLink;
+
+            // Mostra il modal con animazione
+            const modal = document.getElementById('event-detail');
+            modal.style.display = 'block';
+            modal.animate([
+                { transform: 'translateY(100%)' },
+                { transform: 'translateY(0)' }
+            ], {
+                duration: 300,
+                easing: 'cubic-bezier(0.22, 1, 0.36, 1)'
+            });
+            document.body.style.overflow = 'hidden'; // Blocca scroll sotto
+        }
+
+        function closeDetail() {
+            const modal = document.getElementById('event-detail');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Riabilita scroll
+        }
+
+    </script>
+</body>
+</html>
