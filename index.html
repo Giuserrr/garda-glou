@@ -280,57 +280,50 @@
     </div>
 
     <script>
-        // --- 1. DATI DEGLI EVENTI (IL TUO "DATABASE") ---
-        // Quando avrai il CMS, questo verrà sostituito da file reali.
-        // Per ora modifichi qui dentro per vedere l'effetto.
-        const events = [
-            {
-                id: 1,
-                title: "VINI VULCANICI",
-                date: "24 MAGGIO",
-                location: "Desenzano",
-                price: "€ 45",
-                image: "https://images.unsplash.com/photo-1559563362-c667ba5f5480?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80", // Formato verticale
-                desc: "Un viaggio esplosivo tra i vini nati dalla lava. Etna, Vesuvio e non solo. Degustazione di 5 calici con abbinamento cicchetti locali. Non mancare perché sarà una bomba.",
-                stripeLink: "https://buy.stripe.com/test1",
-                active: true
-            },
-            {
-                id: 2,
-                title: "BOLLE RIBELLI",
-                date: "12 GIUGNO",
-                location: "Sirmione",
-                price: "€ 50",
-                image: "https://images.unsplash.com/photo-1598155523122-38423bd4d6bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
-                desc: "Dimentica lo Champagne e il Prosecco. Qui si beve rifermentato col fondo, Pet-Nat e metodi ancestrali che sanno di uva e libertà.",
-                stripeLink: "https://buy.stripe.com/test2",
-                active: true
-            },
-            // Placeholder per eventi futuri
-            { active: false }, 
-            { active: false },
-            { active: false }
-        ];
+        // --- 1. CARICAMENTO DATI DAL CMS (Backend) ---
+    async function loadEvents() {
+        try {
+            // Cerca il file creato dal pannello Admin
+            const response = await fetch('/events.json'); 
+            
+            if (!response.ok) throw new Error("Nessun evento trovato");
 
-        // --- 2. LOGICA PER GENERARE LE CARD ---
+            const data = await response.json();
+            const events = data.events; // Prende la lista dal file
+
+            renderEvents(events); // Disegna le card
+        } catch (error) {
+            console.log("Uso dati di fallback o nessun evento ancora pubblicato");
+            // Se non hai ancora pubblicato nulla, mostra questo placeholder
+            renderEvents([{ 
+                active: false, 
+                title: "Coming Soon" 
+            }]);
+        }
+    }
+
+    // --- 2. LOGICA PER GENERARE LE CARD ---
+    function renderEvents(eventsList) {
         const grid = document.getElementById('events-container');
+        grid.innerHTML = ''; // Pulisce tutto prima di disegnare
 
-        events.forEach(event => {
+        eventsList.forEach(event => {
             const card = document.createElement('article');
             
-            if (event.active) {
-                // Card Evento Attivo
+            // Se l'evento è attivo (TRUE)
+            if (event.active === true || event.active === "true") {
                 card.className = 'card';
+                // Al click apri il dettaglio passando tutto l'oggetto evento
                 card.onclick = () => openDetail(event);
                 card.innerHTML = `
-                    <img src="${event.image}" alt="${event.title}">
+                    <img src="${event.image}" alt="${event.title}" onerror="this.src='https://via.placeholder.com/400x500?text=No+Image'">
                     <div class="card-info">
                         <h3>${event.title}</h3>
                         <p>${event.date}</p>
                     </div>
                 `;
             } else {
-                // Card Coming Soon
+                // Se è disattivato o coming soon
                 card.className = 'card coming-soon';
                 card.innerHTML = `
                     <i class="fas fa-water"></i>
@@ -339,61 +332,50 @@
             }
             grid.appendChild(card);
         });
+    }
 
-        // --- 3. NAVIGAZIONE E INTERAZIONI ---
-        
-        function toggleMenu() {
-            document.getElementById('menu-overlay').classList.toggle('open');
-        }
+    // --- 3. NAVIGAZIONE E INTERAZIONI ---
+    function toggleMenu() { document.getElementById('menu-overlay').classList.toggle('open'); }
+    
+    function showHome() {
+        hideAll();
+        document.getElementById('home-view').style.display = 'block';
+        window.scrollTo(0,0);
+    }
+    
+    function showPage(pageId) {
+        hideAll();
+        document.getElementById(pageId + '-view').style.display = 'block';
+    }
 
-        function showHome() {
-            hideAll();
-            document.getElementById('home-view').style.display = 'block';
-            window.scrollTo(0,0);
-        }
+    function hideAll() {
+        document.getElementById('home-view').style.display = 'none';
+        document.getElementById('chisiamo-view').style.display = 'none';
+        document.getElementById('contatti-view').style.display = 'none';
+        closeDetail();
+    }
 
-        function showPage(pageId) {
-            hideAll();
-            document.getElementById(pageId + '-view').style.display = 'block';
-        }
+    // --- 4. GESTIONE DETTAGLIO ---
+    function openDetail(data) {
+        document.getElementById('detail-title').innerText = data.title;
+        document.getElementById('detail-date').innerHTML = `<i class="far fa-calendar"></i> ${data.date}`;
+        document.getElementById('detail-location').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${data.location}`;
+        document.getElementById('detail-price').innerText = "€ " + data.price;
+        // Gestione descrizione (se arriva dal CMS potrebbe avere caratteri speciali)
+        document.getElementById('detail-desc').innerText = data.desc;
+        document.getElementById('detail-img').src = data.image;
+        document.getElementById('detail-link').href = data.stripeLink;
 
-        function hideAll() {
-            document.getElementById('home-view').style.display = 'none';
-            document.getElementById('chisiamo-view').style.display = 'none';
-            document.getElementById('contatti-view').style.display = 'none';
-            closeDetail();
-        }
+        const modal = document.getElementById('event-detail');
+        modal.style.display = 'block';
+    }
 
-        // --- 4. GESTIONE DETTAGLIO EVENTO (Locandina Grande) ---
-        function openDetail(data) {
-            // Popola i dati
-            document.getElementById('detail-title').innerText = data.title;
-            document.getElementById('detail-date').innerHTML = `<i class="far fa-calendar"></i> ${data.date}`;
-            document.getElementById('detail-location').innerHTML = `<i class="fas fa-map-marker-alt"></i> ${data.location}`;
-            document.getElementById('detail-price').innerText = data.price;
-            document.getElementById('detail-desc').innerText = data.desc;
-            document.getElementById('detail-img').src = data.image;
-            document.getElementById('detail-link').href = data.stripeLink;
+    function closeDetail() {
+        document.getElementById('event-detail').style.display = 'none';
+    }
 
-            // Mostra il modal con animazione
-            const modal = document.getElementById('event-detail');
-            modal.style.display = 'block';
-            modal.animate([
-                { transform: 'translateY(100%)' },
-                { transform: 'translateY(0)' }
-            ], {
-                duration: 300,
-                easing: 'cubic-bezier(0.22, 1, 0.36, 1)'
-            });
-            document.body.style.overflow = 'hidden'; // Blocca scroll sotto
-        }
-
-        function closeDetail() {
-            const modal = document.getElementById('event-detail');
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Riabilita scroll
-        }
-
-    </script>
+    // AVVIA TUTTO
+    // Appena il sito si apre, carica gli eventi veri
+    window.onload = loadEvents;    </script>
 </body>
 </html>
