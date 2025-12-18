@@ -330,16 +330,79 @@
     
     </div>
 </div>
-        <div id="contatti-view" class="page-section">
-            <h1 style="color: var(--skin);">DOVE SIAMO</h1>
-            <p>Via del Vino Matto, 42<br>Desenzano del Garda (BS)</p>
-            <br>
-            <a href="mailto:info@gardaglou.com" style="color: var(--red); font-size: 1.2rem;">info@gardaglou.com</a>
-            <br><br>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.673891461413!2d10.5369!3d45.4705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDXCsDI4JzEzLjgiTiAxMMKwMzInMTIuOCJF!5e0!3m2!1sit!2sit!4v1630000000000!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+    <div id="contatti-view" class="page-section">
+
+    <style>
+        .contact-box {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .contact-title {
+            color: #f4cba8; /* Skin */
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+        .contact-text {
+            font-size: 1.2rem;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .contact-link {
+            color: #d93a2b; /* Rosso Garda Glou */
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1.3rem;
+            transition: 0.3s;
+        }
+        .contact-link:hover {
+            color: #f4cba8;
+            text-decoration: underline;
+        }
+        /* Rende la mappa elastica e perfetta su ogni schermo */
+        .map-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%; /* Formato 16:9 */
+            position: relative;
+            height: 0;
+            border-radius: 8px;
+            border: 1px solid #1a2b6d;
+            margin-top: 40px;
+        }
+        .map-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+
+    <div class="contact-box">
+        <h1 class="contact-title">DOVE SIAMO</h1>
+
+        <p class="contact-text">
+            <strong>GARDA GLOU</strong><br>
+            Via Orefici 20<br>
+            Gavardo (BS)
+        </p>
+
+        <p class="contact-text">
+            📞 <a href="tel:+393381588684" class="contact-link">338 158 8684</a>
+        </p>
+        <p class="contact-text">
+            ✉️ <a href="mailto:info@gardaglou.club" class="contact-link">info@gardaglou.club</a>
+        </p>
+
+        <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.948772367174!2d10.536961276637303!3d45.45066277107386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478195a639352e07%3A0x633182189d2d2398!2sGarda%20Glou!5e0!3m2!1sit!2sit!4v1715949303530!5m2!1sit!2sit" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+
+    </div>
+</div>        </div>
 
     </div>
 
