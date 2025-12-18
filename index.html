@@ -523,7 +523,7 @@
     // AVVIA TUTTO
     // Appena il sito si apre, carica gli eventi veri
     window.onload = loadEvents;    </script>
-    <style>
+<style>
         .whatsapp-container {
             position: fixed;
             bottom: 25px;
@@ -532,14 +532,14 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            gap: 12px; /* Spazio tra scritta e icona */
+            gap: 12px;
             font-family: sans-serif;
         }
 
         /* Il fumetto con la scritta */
         .whatsapp-label {
             background-color: white;
-            color: #0a0f1f; /* Blu scuro */
+            color: #0a0f1f;
             padding: 8px 15px;
             border-radius: 50px;
             font-weight: bold;
@@ -547,11 +547,10 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
             white-space: nowrap;
             opacity: 0;
-            animation: slideIn 0.5s ease-out 1s forwards; /* Appare dopo 1 secondo */
+            animation: slideIn 0.5s ease-out 1s forwards;
             position: relative;
         }
 
-        /* Triangolino del fumetto */
         .whatsapp-label::after {
             content: '';
             position: absolute;
@@ -563,7 +562,7 @@
             border-left: 8px solid white;
         }
 
-        /* Il bottone verde */
+        /* Il bottone verde rotondo */
         .whatsapp-btn {
             background-color: #25d366;
             width: 60px;
@@ -575,19 +574,20 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.4);
             transition: transform 0.3s ease;
             text-decoration: none;
+            overflow: hidden; /* Assicura che l'immagine stia nel cerchio */
         }
 
         .whatsapp-btn:hover {
             transform: scale(1.1);
         }
 
-        .whatsapp-icon {
-            width: 32px;
-            height: 32px;
-            fill: white;
+        /* L'immagine vera e propria */
+        .whatsapp-img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
         }
 
-        /* Animazione di entrata */
         @keyframes slideIn {
             from { opacity: 0; transform: translateX(20px); }
             to { opacity: 1; transform: translateX(0); }
@@ -598,7 +598,7 @@
         <div class="whatsapp-label">Unisciti al Club 🍷</div>
         
         <a href="https://chat.whatsapp.com/LkMllhAJbpm1E3qI0NFTt5?mode=hqrt1" class="whatsapp-btn" target="_blank">
-            <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-26.5l-6.7-4.2-69.8 18.3 18.6-68.1-4.4-6.9c-19.2-30.5-29.4-66.2-29.4-103.3 0-99 80.6-179.6 179.6-179.6 47.9 0 92.9 18.7 126.8 52.6 33.9 33.9 52.6 78.9 52.6 126.8-.1 99-80.6 179.6-179.7 179.6zm98.4-78.5c-5.4-2.7-31.9-15.7-36.9-17.5-4.9-1.8-8.5-2.7-12 2.7-3.6 5.4-13.8 17.4-16.9 21.1-3.1 3.7-6.2 4.1-11.6 1.4-5.4-2.7-22.7-8.4-43.3-26.7-16.1-14.3-26.9-32-30.1-37.4-3.1-5.4-.3-8.3 2.4-11 2.4-2.4 5.4-6.2 8.1-9.3 2.7-3.1 3.6-5.4 5.4-8.9 1.8-3.6.9-6.7-.5-9.3-1.4-2.7-12-28.9-16.5-39.6-4.3-10.4-8.7-9-12-9.1-3.1-.1-6.6-.1-10.2-.1-3.6 0-9.4 1.3-14.3 6.7-4.9 5.4-18.8 18.4-18.8 44.9 0 26.5 19.3 52.1 22 55.7 2.7 3.7 38.1 58.1 92.2 81.5 12.9 5.5 22.9 8.9 30.8 11.4 13.1 4.1 25 3.5 34.4 2.1 10.4-1.5 31.9-13 36.4-25.6 4.5-12.5 4.5-23.2 3.1-25.6-1.3-2.3-4.9-3.7-10.3-6.4z"/></svg>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-img">
         </a>
-    </div>  </body>
+    </div></body>
 </html>
