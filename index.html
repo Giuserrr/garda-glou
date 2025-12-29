@@ -212,8 +212,30 @@
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
         .map-container iframe { width: 100%; border-radius: 8px; filter: grayscale(100%) invert(92%) contrast(83%); }
-
-    </style>
+/* --- FOOTER LEGALE (Ripristinato) --- */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            margin-top: 50px;
+            border-top: 1px solid rgba(26, 43, 109, 0.3); /* Linea sottile */
+            color: var(--gray);
+            font-size: 0.9rem;
+            background: linear-gradient(to top, rgba(10,15,31,1), rgba(10,15,31,0));
+        }
+        footer p { margin-bottom: 5px; }
+        footer a { color: var(--gray); text-decoration: none; transition: 0.3s; }
+        footer a:hover { color: var(--skin); text-decoration: underline; }
+        
+        .legal-links { 
+            margin-top: 20px; 
+            margin-bottom: 20px;
+            font-weight: bold; 
+            letter-spacing: 1px; 
+            font-family: 'Anton', sans-serif;
+        }
+        
+        .legal-links a { margin: 0 10px; color: var(--white); }
+        .legal-links a:hover { color: var(--red); }    </style>
     <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
   window.OneSignalDeferred = window.OneSignalDeferred || [];
@@ -362,8 +384,24 @@
             </div>
         </div>
     </div>
+<footer>
+        <p><strong>GARDA GLOU</strong></p>
+        <p>P.IVA: 00000000000 | Sede Legale: Via Orefici 20, Gavardo (BS)</p>
+        <p><a href="mailto:info@gardaglou.club">info@gardaglou.club</a></p>
+        
+        <div class="legal-links">
+            <a href="/termini.html">TERMINI E CONDIZIONI</a>
+            <span style="color:var(--red)">•</span>
+            <a href="/privacy.html">PRIVACY POLICY</a>
+        </div>
+        
+        <div style="font-size: 1.2rem; margin-top: 15px;">
+            <a href="https://instagram.com" target="_blank" style="margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" style="margin: 0 10px;"><i class="fab fa-facebook"></i></a>
+        </div>
 
-    <div id="event-detail">
+        <p style="margin-top:30px; font-size: 0.7rem; opacity: 0.5;">Made with 🍷 & Code</p>
+    </footer>    <div id="event-detail">
         <div class="close-btn" onclick="closeDetail()"><i class="fas fa-times"></i></div>
         <div class="detail-hero">
             <img id="detail-img" src="" alt="">
