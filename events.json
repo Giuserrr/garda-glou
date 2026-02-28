@@ -12,6 +12,16 @@
     },
     {
       "active": true,
+      "title": "🥂 CHAMPAGNE UNDERGROUND",
+      "date": "Venerdì 13 Marzo – ore 19.30",
+      "location": "Villa ER",
+      "price": "120",
+      "desc": "Una serata dedicata allo Champagne artigianale.\nQuello dei vignaioli veri.\nQuello che non trovi nelle carte facili.\nSelezione mia\nselezione personale di Gibo Zola.\nIn tavola:\nDomaine Léon\nThomas Perseval\nLegrand Latour\nDehours & Fils\nLamblot\nBenoît Lahaye\nPascal Mazet\nChampagne di territorio.\nDi identità.\nDi mano.\nNon è una degustazione tecnica.\nÈ una tavolata ad alta pressione.\n🍽 In abbinamento\n• Crostino pane, burro e acciughe siciliane\n• Lasagnette salmone e zucchine\n• Seppioline in umido con piselli\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota: 120€\nPosti limitati.\n🔒 Accesso riservato.\nBottiglie scelte con criterio, non con etichetta da mostrare.\nSe sai cosa stai bevendo, sei nel posto giusto. 🥂",
+      "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001",
+      "image": "/uploads/chamapgne.png"
+    },
+    {
+      "active": true,
       "title": "CHAMPAGNE! LET'S GO! ",
       "date": "8 Gennaio",
       "location": "Villa ER",
@@ -52,13 +62,13 @@
     },
     {
       "active": true,
-      "title": "🥂 CHAMPAGNE UNDERGROUND",
-      "date": "Venerdì 13 Marzo – ore 19.30",
+      "title": " 🍂 TERRE DI CONFINE",
+      "date": "Domenica 22 Marzo – ore 12.30",
       "location": "Villa ER",
-      "price": "120",
-      "desc": "Una serata dedicata allo Champagne artigianale.\nQuello dei vignaioli veri.\nQuello che non trovi nelle carte facili.\nSelezione mia\nselezione personale di Gibo Zola.\nIn tavola:\nDomaine Léon\nThomas Perseval\nLegrand Latour\nDehours & Fils\nLamblot\nBenoît Lahaye\nPascal Mazet\nChampagne di territorio.\nDi identità.\nDi mano.\nNon è una degustazione tecnica.\nÈ una tavolata ad alta pressione.\n🍽 In abbinamento\n• Crostino pane, burro e acciughe siciliane\n• Lasagnette salmone e zucchine\n• Seppioline in umido con piselli\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota: 120€\nPosti limitati.\n🔒 Accesso riservato.\nBottiglie scelte con criterio, non con etichetta da mostrare.\nSe sai cosa stai bevendo, sei nel posto giusto. 🥂",
+      "price": "100",
       "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001",
-      "image": "/uploads/chamapgne.png"
+      "desc": "Torna a Garda Glou Simone Liloni.\nUna tavolata dedicata al confine più affascinante d’Europa:\nFriuli e Carso, tra Italia e Slovenia.\nIn degustazione:\nRencel\nRonco Severo\nAltre selezioni dal Carso (no spoiler)\nE un nome che parla da solo:\nRibolla Gialla di Podversic – selezione riserva in formato Magnum.\nNon una bottiglia qualsiasi.\nUna Magnum.\nTempo, struttura, profondità.\nQui non si parla di vini semplici.\nSi parla di macerazioni vere.\nDi roccia, vento, ossidazione controllata, tempo.\nNon è una degustazione tecnica.\nÈ un pranzo di territorio e carattere.\n🍽 In tavola\n• Antipasti selezionati\n• Lasagne alle ortiche\n• Faraona farcita con patate\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota: 100€\nPosti limitati.\n🔒 Non è per chi cerca freschezza facile.\nÈ per chi ama vini che lasciano il segno.",
+      "image": "/uploads/terre-di-confine.png"
     }
   ]
 }
