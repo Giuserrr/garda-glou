@@ -2,6 +2,16 @@
   "events": [
     {
       "active": true,
+      "title": "🍷 BLIND CELLAR",
+      "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001",
+      "date": "Sabato 7 Marzo – ore 12.30",
+      "location": "Villa ER",
+      "price": "40",
+      "desc": "Una volta al mese apro la mia cantina personale.\nChi partecipa riceve in privato la lista completa delle bottiglie disponibili.\nDal Jura alla Borgogna.\nChampagne artigianale.\nItalia radicale.\nQualche pezzo che non si trova facilmente.\nOgnuno sceglie la propria bottiglia.\nPoi succede la cosa bella.\nLe bottiglie vengono servite alla cieca.\nNessuno sa cosa sta bevendo.\nNemmeno chi l’ha scelta.\nNiente etichette.\nNiente preconcetti.\nSolo vino e verità nel bicchiere.\n🍽 In tavola\n• Selezione di salumi misti\n• Tortino vegetariano\n• Lasagnetta al radicchio\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota partecipazione: 40€\nbottiglia scelta dalla cantina (prezzo comunicato in privato)\nPosti limitati: 6 – 8 persone.\n🔒 La lista non è pubblica.\nSi riceve solo su richiesta.\nAccesso riservato.\nNon è per curiosi.\nÈ per chi sceglie. 🍷",
+      "image": "/uploads/blind-cellar.png"
+    },
+    {
+      "active": true,
       "title": "CHAMPAGNE! LET'S GO! ",
       "date": "8 Gennaio",
       "location": "Villa ER",
@@ -42,13 +52,13 @@
     },
     {
       "active": true,
-      "title": "🍷 BLIND CELLAR",
-      "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001",
-      "date": "Sabato 7 Marzo – ore 12.30",
+      "title": "🥂 CHAMPAGNE UNDERGROUND",
+      "date": "Venerdì 13 Marzo – ore 19.30",
       "location": "Villa ER",
-      "price": "40",
-      "desc": "Una volta al mese apro la mia cantina personale.\nChi partecipa riceve in privato la lista completa delle bottiglie disponibili.\nDal Jura alla Borgogna.\nChampagne artigianale.\nItalia radicale.\nQualche pezzo che non si trova facilmente.\nOgnuno sceglie la propria bottiglia.\nPoi succede la cosa bella.\nLe bottiglie vengono servite alla cieca.\nNessuno sa cosa sta bevendo.\nNemmeno chi l’ha scelta.\nNiente etichette.\nNiente preconcetti.\nSolo vino e verità nel bicchiere.\n🍽 In tavola\n• Selezione di salumi misti\n• Tortino vegetariano\n• Lasagnetta al radicchio\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota partecipazione: 40€\nbottiglia scelta dalla cantina (prezzo comunicato in privato)\nPosti limitati: 6 – 8 persone.\n🔒 La lista non è pubblica.\nSi riceve solo su richiesta.\nAccesso riservato.\nNon è per curiosi.\nÈ per chi sceglie. 🍷",
-      "image": "/uploads/blind-cellar.png"
+      "price": "120",
+      "desc": "Una serata dedicata allo Champagne artigianale.\nQuello dei vignaioli veri.\nQuello che non trovi nelle carte facili.\nSelezione mia\nselezione personale di Gibo Zola.\nIn tavola:\nDomaine Léon\nThomas Perseval\nLegrand Latour\nDehours & Fils\nLamblot\nBenoît Lahaye\nPascal Mazet\nChampagne di territorio.\nDi identità.\nDi mano.\nNon è una degustazione tecnica.\nÈ una tavolata ad alta pressione.\n🍽 In abbinamento\n• Crostino pane, burro e acciughe siciliane\n• Lasagnette salmone e zucchine\n• Seppioline in umido con piselli\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota: 120€\nPosti limitati.\n🔒 Accesso riservato.\nBottiglie scelte con criterio, non con etichetta da mostrare.\nSe sai cosa stai bevendo, sei nel posto giusto. 🥂",
+      "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001",
+      "image": "/uploads/chamapgne.png"
     }
   ]
 }
