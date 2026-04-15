@@ -2,23 +2,13 @@
   "events": [
     {
       "active": true,
-      "title": "🍷 BLIND CELLAR",
-      "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001",
-      "date": "Sabato 7 Marzo – ore 12.30",
-      "location": "Villa ER",
-      "price": "40",
-      "desc": "Una volta al mese apro la mia cantina personale.\nChi partecipa riceve in privato la lista completa delle bottiglie disponibili.\nDal Jura alla Borgogna.\nChampagne artigianale.\nItalia radicale.\nQualche pezzo che non si trova facilmente.\nOgnuno sceglie la propria bottiglia.\nPoi succede la cosa bella.\nLe bottiglie vengono servite alla cieca.\nNessuno sa cosa sta bevendo.\nNemmeno chi l’ha scelta.\nNiente etichette.\nNiente preconcetti.\nSolo vino e verità nel bicchiere.\n🍽 In tavola\n• Selezione di salumi misti\n• Tortino vegetariano\n• Lasagnetta al radicchio\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota partecipazione: 40€\nbottiglia scelta dalla cantina (prezzo comunicato in privato)\nPosti limitati: 6 – 8 persone.\n🔒 La lista non è pubblica.\nSi riceve solo su richiesta.\nAccesso riservato.\nNon è per curiosi.\nÈ per chi sceglie. 🍷",
-      "image": "/uploads/blind-cellar.png"
-    },
-    {
-      "active": true,
-      "title": "🥂 CHAMPAGNE UNDERGROUND",
-      "date": "Venerdì 13 Marzo – ore 19.30",
+      "title": "🇫🇷 FRANCIA RADICALE",
+      "date": "Venerdì 27 Marzo – ore 19.30",
       "location": "Villa ER",
       "price": "120",
-      "desc": "Una serata dedicata allo Champagne artigianale.\nQuello dei vignaioli veri.\nQuello che non trovi nelle carte facili.\nSelezione mia\nselezione personale di Gibo Zola.\nIn tavola:\nDomaine Léon\nThomas Perseval\nLegrand Latour\nDehours & Fils\nLamblot\nBenoît Lahaye\nPascal Mazet\nChampagne di territorio.\nDi identità.\nDi mano.\nNon è una degustazione tecnica.\nÈ una tavolata ad alta pressione.\n🍽 In abbinamento\n• Crostino pane, burro e acciughe siciliane\n• Lasagnette salmone e zucchine\n• Seppioline in umido con piselli\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota: 120€\nPosti limitati.\n🔒 Accesso riservato.\nBottiglie scelte con criterio, non con etichetta da mostrare.\nSe sai cosa stai bevendo, sei nel posto giusto. 🥂",
       "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001",
-      "image": "/uploads/chamapgne.png"
+      "desc": "Torna Gibo Zola.\nUna serata dedicata alla Francia che non fa compromessi.\nIn tavola:\nJ.P. Robinot – Loira\nMatthieu Barret – Rodano\nLabet – Jura\nRuppert Leroy – Champagne\nBalagny – Beaujolais\nYann Durieux – Borgogna\nTony Bornard (Magnum !)– Jura\nE non è finita...\nLa settimana precedente Gibo sarà in Francia.\nPotrebbe arrivare un’altra bomba a mano.\nNiente spoiler.\nFrancia di territorio.\nFrancia di mano.\nFrancia vera.\nNon è una degustazione lineare.\nÈ una tavolata di carattere.\n🍽 In abbinamento\n• Antipasti selezionati\n• Salumi misti\n• Lasagne al baccalà\n• Pancia di maiale brasata\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota: 120€\nPosti limitati.\n🔒 Alcune bottiglie non si vedono spesso sul tavolo.\nMeglio esserci.",
+      "image": "/uploads/francia-radicale.png"
     },
     {
       "active": true,
@@ -32,33 +22,33 @@
     },
     {
       "active": true,
-      "title": "🇫🇷 FRANCIA RADICALE",
-      "date": "Venerdì 27 Marzo – ore 19.30",
+      "title": "🥂 CHAMPAGNE UNDERGROUND",
+      "date": "Venerdì 13 Marzo – ore 19.30",
       "location": "Villa ER",
       "price": "120",
+      "desc": "Una serata dedicata allo Champagne artigianale.\nQuello dei vignaioli veri.\nQuello che non trovi nelle carte facili.\nSelezione mia\nselezione personale di Gibo Zola.\nIn tavola:\nDomaine Léon\nThomas Perseval\nLegrand Latour\nDehours & Fils\nLamblot\nBenoît Lahaye\nPascal Mazet\nChampagne di territorio.\nDi identità.\nDi mano.\nNon è una degustazione tecnica.\nÈ una tavolata ad alta pressione.\n🍽 In abbinamento\n• Crostino pane, burro e acciughe siciliane\n• Lasagnette salmone e zucchine\n• Seppioline in umido con piselli\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota: 120€\nPosti limitati.\n🔒 Accesso riservato.\nBottiglie scelte con criterio, non con etichetta da mostrare.\nSe sai cosa stai bevendo, sei nel posto giusto. 🥂",
       "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001",
-      "desc": "Torna Gibo Zola.\nUna serata dedicata alla Francia che non fa compromessi.\nIn tavola:\nJ.P. Robinot – Loira\nMatthieu Barret – Rodano\nLabet – Jura\nRuppert Leroy – Champagne\nBalagny – Beaujolais\nYann Durieux – Borgogna\nTony Bornard (Magnum !)– Jura\nE non è finita...\nLa settimana precedente Gibo sarà in Francia.\nPotrebbe arrivare un’altra bomba a mano.\nNiente spoiler.\nFrancia di territorio.\nFrancia di mano.\nFrancia vera.\nNon è una degustazione lineare.\nÈ una tavolata di carattere.\n🍽 In abbinamento\n• Antipasti selezionati\n• Salumi misti\n• Lasagne al baccalà\n• Pancia di maiale brasata\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota: 120€\nPosti limitati.\n🔒 Alcune bottiglie non si vedono spesso sul tavolo.\nMeglio esserci.",
-      "image": "/uploads/francia-radicale.png"
+      "image": "/uploads/chamapgne.png"
     },
     {
       "active": true,
-      "title": "CHAMPAGNE! LET'S GO! ",
-      "date": "8 Gennaio",
+      "title": "🍷 BLIND CELLAR",
+      "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001",
+      "date": "Sabato 7 Marzo – ore 12.30",
       "location": "Villa ER",
-      "price": "85",
-      "image": "/uploads/riserva-indiana.webp",
-      "desc": "Giovedì 8 gennaio organizzo una serata di degustazione in formula intima, a casa, su prenotazione.\n\nIn degustazione:\n\nSelezione Champagne 🍾😎– Ale\n\nMarion Perseval-Réserve Blanc de Blancs\nAmaury Beaufort - Nature Rosé\n\nSelezione Mattia Lari – Riserva Indiana 🪽🍷🪶\n\nLe Cave Apicole – Java \nYohan Lardy Beaujolais – Moulin-à-Vent Vieilles Vignes\nDomaine de Souch Jurançon – Cuvée M. Kattalin \n\nUna degustazione pensata come un percorso, tra Champagne, bianchi di carattere, rossi profondi e una chiusura dolce fuori dagli schemi.\n\nIn accompagnamento, piatti in vasocottura artigianale di Paolo Bodon, scelti per stare accanto ai vini senza rubare la scena.\nPane, burro, paté di sardina e composta di pompelmo rosa\nRicottina fresca pepe affumicato e semi di girasole tostati\nRigatoni all amatriciana in vaso cottura\nTortino alla zucca ,miele e pop corn di parmigiano\n\n🏡 📍 Soprazzocco di Gavardo – Via Orefici 20\n🕢 dalle 19.30\n👥 Posti limitati",
-      "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001"
+      "price": "40",
+      "desc": "Una volta al mese apro la mia cantina personale.\nChi partecipa riceve in privato la lista completa delle bottiglie disponibili.\nDal Jura alla Borgogna.\nChampagne artigianale.\nItalia radicale.\nQualche pezzo che non si trova facilmente.\nOgnuno sceglie la propria bottiglia.\nPoi succede la cosa bella.\nLe bottiglie vengono servite alla cieca.\nNessuno sa cosa sta bevendo.\nNemmeno chi l’ha scelta.\nNiente etichette.\nNiente preconcetti.\nSolo vino e verità nel bicchiere.\n🍽 In tavola\n• Selezione di salumi misti\n• Tortino vegetariano\n• Lasagnetta al radicchio\n• Selezione di formaggi\n• Acqua e caffè\n🎟 Quota partecipazione: 40€\nbottiglia scelta dalla cantina (prezzo comunicato in privato)\nPosti limitati: 6 – 8 persone.\n🔒 La lista non è pubblica.\nSi riceve solo su richiesta.\nAccesso riservato.\nNon è per curiosi.\nÈ per chi sceglie. 🍷",
+      "image": "/uploads/blind-cellar.png"
     },
     {
       "active": true,
-      "title": "Jura",
-      "date": "14 Gennaio",
+      "title": "ETNA - GENERAZIONI A CONFRONTO",
+      "date": "30 Gennaio",
       "location": "Villa ER",
-      "price": "120",
+      "price": "75",
       "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001",
-      "image": "/uploads/stefano-berzi-serata-jura.webp",
-      "desc": "Mercoledì 14 Gennaio organizzo una serata dedicata al Jura, in formula intima e su prenotazione.\n\nIn degustazione una selezione firmata Ganevat:\n– Savagnin \"La Barraque\" Magnum!\n- Savagnin \"Le Clos\" Magnum!\n– Chardonnay  “En Billat” \n– Pinot Noir \"Les Colline des Dames\"\n\nI vini saranno raccontati da Stefano Berzi, giovane sommelier di grande sensibilità, che durante la serata condividerà piccole pillole sullo Jura: il territorio, le visioni, le differenze, senza didattica pesante, solo per dare contesto al calice.\n\nUn incontro pensato per chi ama ascoltare il vino, con calma.\n\nIn accompagnamento, piatti in vasocottura artigianale di Paolo Bodon, scelti per stare accanto ai vini senza rubare la scena.\n\nPaté di trota e mozzarella di bufala al profumo di erba cipollina\nLonzino fatto in casa marinato al nocino\nRisottino con cavolo nero e stracotto di cinghiale\nZabaione salato,patate americane e burro di tartufo\n\n🏡 📍 Soprazzocco di Gavardo – Via Orefici 20\n🕢 dalle 19.30\n👥 Posti limitatissimi!"
+      "desc": "Venerdì 30 gennaio organizzo una serata dedicata all’Etna, in formula intima e su prenotazione.\n\nUna sfida gentile tra vigneron dell’Etna, tutta giocata sui rossi. In degustazione:\n\nSelezione Ale\nEduardo Torres Acosta - Versante Nord\nCamarda \"Rosso\"\nCamarda \"I Surchitti\"\n\nSelezione Simone Liloni -Proposta Vini-\n\nI Custodi delle Vigne dell’Etna-Etna Rosso “Pistus”\nI Vigneri -Etna Rosso “Vinupetra”\n\nStessa montagna, tre interpretazioni diverse.\nUn confronto diretto, calice dopo calice, senza fretta.\n\nIn accompagnamento, piatti in vasocottura artigianale di Paolo Bodon, pensati per sostenere il confronto senza interferire.\nTortino di formaggio di pecora con cicoria ripassata\nInsalata di finocchi,olive, arancia e acciuga\nRigatoni broccoli,uvetta ,pinoli e pangrattato ai capperi\nCaponata stile siciliano\n\n🏡📍 Soprazzocco di Gavardo – Via Orefici 20\n🕢 dalle 19.30\n👥 Posti limitati",
+      "image": "/uploads/vini-etna.webp"
     },
     {
       "active": true,
@@ -72,13 +62,23 @@
     },
     {
       "active": true,
-      "title": "ETNA - GENERAZIONI A CONFRONTO",
-      "date": "30 Gennaio",
+      "title": "Jura",
+      "date": "14 Gennaio",
       "location": "Villa ER",
-      "price": "75",
+      "price": "120",
       "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001",
-      "desc": "Venerdì 30 gennaio organizzo una serata dedicata all’Etna, in formula intima e su prenotazione.\n\nUna sfida gentile tra vigneron dell’Etna, tutta giocata sui rossi. In degustazione:\n\nSelezione Ale\nEduardo Torres Acosta - Versante Nord\nCamarda \"Rosso\"\nCamarda \"I Surchitti\"\n\nSelezione Simone Liloni -Proposta Vini-\n\nI Custodi delle Vigne dell’Etna-Etna Rosso “Pistus”\nI Vigneri -Etna Rosso “Vinupetra”\n\nStessa montagna, tre interpretazioni diverse.\nUn confronto diretto, calice dopo calice, senza fretta.\n\nIn accompagnamento, piatti in vasocottura artigianale di Paolo Bodon, pensati per sostenere il confronto senza interferire.\nTortino di formaggio di pecora con cicoria ripassata\nInsalata di finocchi,olive, arancia e acciuga\nRigatoni broccoli,uvetta ,pinoli e pangrattato ai capperi\nCaponata stile siciliano\n\n🏡📍 Soprazzocco di Gavardo – Via Orefici 20\n🕢 dalle 19.30\n👥 Posti limitati",
-      "image": "/uploads/vini-etna.webp"
+      "image": "/uploads/stefano-berzi-serata-jura.webp",
+      "desc": "Mercoledì 14 Gennaio organizzo una serata dedicata al Jura, in formula intima e su prenotazione.\n\nIn degustazione una selezione firmata Ganevat:\n– Savagnin \"La Barraque\" Magnum!\n- Savagnin \"Le Clos\" Magnum!\n– Chardonnay  “En Billat” \n– Pinot Noir \"Les Colline des Dames\"\n\nI vini saranno raccontati da Stefano Berzi, giovane sommelier di grande sensibilità, che durante la serata condividerà piccole pillole sullo Jura: il territorio, le visioni, le differenze, senza didattica pesante, solo per dare contesto al calice.\n\nUn incontro pensato per chi ama ascoltare il vino, con calma.\n\nIn accompagnamento, piatti in vasocottura artigianale di Paolo Bodon, scelti per stare accanto ai vini senza rubare la scena.\n\nPaté di trota e mozzarella di bufala al profumo di erba cipollina\nLonzino fatto in casa marinato al nocino\nRisottino con cavolo nero e stracotto di cinghiale\nZabaione salato,patate americane e burro di tartufo\n\n🏡 📍 Soprazzocco di Gavardo – Via Orefici 20\n🕢 dalle 19.30\n👥 Posti limitatissimi!"
+    },
+    {
+      "active": true,
+      "title": "CHAMPAGNE! LET'S GO! ",
+      "date": "8 Gennaio",
+      "location": "Villa ER",
+      "price": "85",
+      "image": "/uploads/riserva-indiana.webp",
+      "desc": "Giovedì 8 gennaio organizzo una serata di degustazione in formula intima, a casa, su prenotazione.\n\nIn degustazione:\n\nSelezione Champagne 🍾😎– Ale\n\nMarion Perseval-Réserve Blanc de Blancs\nAmaury Beaufort - Nature Rosé\n\nSelezione Mattia Lari – Riserva Indiana 🪽🍷🪶\n\nLe Cave Apicole – Java \nYohan Lardy Beaujolais – Moulin-à-Vent Vieilles Vignes\nDomaine de Souch Jurançon – Cuvée M. Kattalin \n\nUna degustazione pensata come un percorso, tra Champagne, bianchi di carattere, rossi profondi e una chiusura dolce fuori dagli schemi.\n\nIn accompagnamento, piatti in vasocottura artigianale di Paolo Bodon, scelti per stare accanto ai vini senza rubare la scena.\nPane, burro, paté di sardina e composta di pompelmo rosa\nRicottina fresca pepe affumicato e semi di girasole tostati\nRigatoni all amatriciana in vaso cottura\nTortino alla zucca ,miele e pop corn di parmigiano\n\n🏡 📍 Soprazzocco di Gavardo – Via Orefici 20\n🕢 dalle 19.30\n👥 Posti limitati",
+      "stripeLink": "https://book.stripe.com/7sYeV63nhfHEdbU76Nak001"
     }
   ]
 }
